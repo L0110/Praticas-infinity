@@ -25,7 +25,7 @@ while tentativa > 0:
     elif(num != aleatorio) and (tentativa == 1):
         print("Mais uma chance. Você chegou perto... talvez\n\n")
         tentativa -= 1
-    elif(num == aleatorio):
+    else:
         print(f"Muito bem!🎉 o numero secreto é: {aleatorio}")
         break
 

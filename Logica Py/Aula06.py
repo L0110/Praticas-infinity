@@ -1,12 +1,3 @@
-"""
-
-Sistema de Login com Tentativas Limitadas:
-Desenvolva um programa que simule um sistema de login.
-O programa deve solicitar o nome de usuário e senha até que o
-usuário insira as credenciais corretas ou até que o número máximo
-de tentativas seja atingido. Use um laço while com uma condicional
-para verificar as credenciais e limitar as tentativas."""
-
 '''1- Conversão de Unidades:
 Crie um programa que converta metros para centímetros.
 Peça ao usuário para digitar um valor em metros, armazene
@@ -244,4 +235,23 @@ while cont < len(palavra):
         print(f"A palavra '{palavra}' é um palíndromo.")
     else:
         print(f"A palavra '{palavra}' não é um palíndromo.")
-        
+
+'''18-Sistema de Login com Tentativas Limitadas:
+Desenvolva um programa que simule um sistema de login.
+O programa deve solicitar o nome de usuário e senha até que o
+usuário insira as credenciais corretas ou até que o número máximo
+de tentativas seja atingido. Use um laço while com uma condicional
+para verificar as credenciais e limitar as tentativas.'''
+print("Sistema de Login")
+tentativas = 0
+while tentativas < 3:
+    usuario = input("Digite o nome de usuário: ")
+    senha = input("Digite a senha: ")
+    if usuario == "admin" and senha == "1234":
+        print("Login realizado com sucesso!")
+        break
+    else:
+        tentativas += 1
+        print(f"Tentativas restantes: {3 - tentativas}")
+else:
+    print("Número máximo de tentativas atingido. Login negado!")

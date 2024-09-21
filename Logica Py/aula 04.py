@@ -149,11 +149,53 @@ else:
 Verificar Números Pares e Impares com Interrupção:
 Crie um programa que use um laço for para contar de 1 a 20. Use condicionais para
 identificar números pares e ímpares. Pare o loop ao encontrar o número 15, usando break."""
+rep = 20
+par = 0
+imp = 0
+zero = 0
+end = 15
+print("=========== Teste par ou impar ===========\n\n")
+
+
+for i in range(1,rep+1):
+    print(i,")",end="")
+    num = int(input("Insira um valor:"))
+    if num%2 == 0:
+        par += 1
+    else:
+        imp += 1
+    if i == end:
+        break
+
+print("======== Contagem ========")
+print(f"Numeros Pares: {par}")
+print(f"Numeros impares: {imp}")        
+
 
 """Atividade 10:
 Contar Números Positivos e Negativos:
 Peça ao usuário para inserir 10 números. Use um laço for com condicionais para contar quantos
 são positivos e quantos são negativos. Pare o loop se o número 0 for inserido, usando break."""
+
+pos = 0
+neg = 0
+rep = 10
+
+print("====== CONTAGEM NUMEROS POSITIVOS E NEGATIVOS ======")
+for i in range(0,rep):
+    num = int(input("Insira um valor: "))
+    if num < 0:
+        neg += 1
+    elif num == 0:
+        print("Zero foi inserido...")
+        break
+    else:
+        pos += 1
+
+print("Contagem: ")
+print(f"Positivos: {pos}\nNegativos: {neg}")
+
+
     
 """Atividade 11:
 Verificar Múltiplos de 5 e Parar:
@@ -161,9 +203,39 @@ Escreva um programa que use um laço for para imprimir números de 1 a 30.
 Use uma condicional para verificar se um número é múltiplo de 5 e outro
 para verificar se é maior que 20 e interromper o loop com break.
 """
+print("======== Multipos de 5 ========")
+mul = 0
+for i in range(1,30+1):
+    print(i,end=", ")
+    if i % 5 == 0:
+        mul += 1
+    
+    if i == 20:
+        break
+
+print(f"\n\nMultiplos de 5: {mul}")
+
 
 """Atividade 12:
 Soma de Números com Desconto:
 Peça ao usuário para inserir 5 preços de produtos. Use um laço for para
 calcular o total. Aplique um desconto de 10% se o total ultrapassar 100 e
 interrompa o loop com break."""
+
+print("----- Carrinho de compras -----")
+rep = 5
+soma = 0
+for i in range(1,rep+1):
+    print(f"{i})",end=" ")
+    vlr = float(input("Preço do item: R$ "))
+    soma += vlr
+
+if soma >= 100:
+    print('Desconto disponível: "10%" de desconto para compras acima de R$ 100,00')
+    desc = soma*0.1
+
+print("---- Total ----")
+print(f"Compra: R$ {soma}")
+print(f"desconto: R$ {desc}")
+total = soma - desc
+print(f"total a pagar: {total}")

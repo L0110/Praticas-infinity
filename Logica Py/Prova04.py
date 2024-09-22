@@ -13,7 +13,7 @@ fim = int(input("Insira o valor final do intervalo: "))
 soma = 0
 par = 0
 for i in range(inicio,fim+1):
-    if (i % 2 == 0) and (i> 0):
+    if (i % 2 == 0):
         soma += i
         par += 1
         print("")

@@ -1,0 +1,5 @@
+Finalidade              Sintaxe         Função
+Adição de itens         .append()       Adicionar um elemento ao final da lista
+Adição de itens         .insert()       Adicionar um elemento na posição informada
+Remoção de itens        .remove()       Remover um elemento de uma lista através de seu valor
+Remoção de itens        .pop()          Remover um elemento de uma lista através de seu índice

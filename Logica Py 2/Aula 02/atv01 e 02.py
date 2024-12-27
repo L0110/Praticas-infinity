@@ -5,7 +5,12 @@ seguintes frutas a ele:"maçã","banana","uva","laranja" e "morango".
 Em seguida, imprima o conjunto.
 """
 
-frutas = {"maçã","banana","uva","laranja","morango"}
+frutas = set()
+frutas.add("maçã")
+frutas.add("banana")
+frutas.add("uva")
+frutas.add("laranja")
+frutas.add("morango")
 print(frutas)
 
 #02__________________________________________________________________________________

@@ -15,9 +15,6 @@ class Clientes(Pessoas):
         cod += 1
         self.codigo = cod
 
-class Edificio:
-    
-
 class Quartos:
     def __init__(self,porta,tipo,preco,status):
         self.porta = porta
@@ -25,23 +22,24 @@ class Quartos:
         self.preco = preco
         self.__disponivel = True
 
+    andaresEdificio = list(range(1,5))      
+    
     def tipoQuarto(numSala,andaresEdificio):
         single = ['01','03','05','07']
         double = ['08','09','11','12']
         suite = ['02','04','06','10']
         andar = int(numSala[:-2])
-
-    andaresEdificio = list(range(1,17))      
+    
     
     single_preco = 100
     double_preco = 200
     suite = 400
     
-    manutenção
-    limeza
-    ocupado
-    
-    livre
+"""
+status: Livre
+        ocupado
+        bloqueado
+"""
 
 class Reservas():
     def __init__(self,hospede,uh,checkIn,checkOut,status):
@@ -50,13 +48,6 @@ class Reservas():
         self.checkIn = checkIn
         self.checkOut = checkOut
         self.statusReserva = status
-
-    cancelado
-    finalizado
-    pendente
-
-    ativo
-
 
 class GerenciadorDeReservas:
     codigo:int = 0

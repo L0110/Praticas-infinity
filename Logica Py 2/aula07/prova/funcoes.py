@@ -1,5 +1,7 @@
+# Importacao da bibliotea Random
 import random
 
+# Criacao da funcao "Lancar dados"
 def lancar_dados():
     dados = []
     for i in range (1,3):

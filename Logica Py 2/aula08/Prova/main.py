@@ -27,19 +27,20 @@ print("-"*60)
 
 #Listagem de todos os arquivos no diretorio e os subdiretorios
 for item in conteudo_diretorio:
-
     caminho_completo = os.path.join(caminho,item)
-    
     if os.path.isdir(caminho_completo):
         #listagem dos subdiretorios
-        subdiretorio_conteudo = os.listdir(caminho_completo)
+        print("-"*60)
+        print(f"- {os.path.join(caminho,item)}")
+        print("."*60)
         
+        subdiretorio_conteudo = os.listdir(caminho_completo)
         for subitem in subdiretorio_conteudo:
-            
             if os.path.isfile(os.path.join(caminho_completo,subitem)):
                 
-                print("- ",os.path.join(caminho_completo,subitem))
-                
+                print("-- ",os.path.join(caminho_completo,subitem))
+            
             elif os.path.isfile(caminho_completo):
                 #listagem dos arquivos do diretorio principal
+
                 print("- ",caminho_completo)

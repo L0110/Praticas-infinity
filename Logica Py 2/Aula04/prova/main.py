@@ -4,18 +4,20 @@ Esta função deve calcular a média aritmética desses três números. Para faz
 some os três números e, em seguida, divida o resultado por três. Por fim, a função deve 
 retornar o valor da média aritmética calculada.
 """
-
+#Criacao da funcao
 def media(notas):
     return sum(notas)/3
 
-notas = []
 
+notas = []
 print("-"*60)
 print("\t"*3,"Cálculo da média")
 print("-"*60)
 
+#Entrada de dados
 for i in range (1,4):
     nota = float(input(f"Nota da prova {i}: "))
     notas.append(nota)
     
+#Impressao na tela
 print(f"A media do aluno é: { media(notas) }")

@@ -23,9 +23,9 @@ def principal(janela:flet.Page):
         prefix_text="www.",
         suffix_text=".com.br",
         max_length=10,
-        label="Digite o Site"
+        label="Digite o Site",
         #value="teste",
-        #color=flet.Colors.BLACK38,
+        color=flet.Colors.BLACK38,
         #prefix_icons = flet.icons.SAVE,
         #suffix_icons = flet.icons.PRINT
     )
@@ -65,7 +65,7 @@ def principal(janela:flet.Page):
     
     #print(site.value)
     janela.add(
-        ola,login,senha,salvar
+        ola,login,senha,salvar,site
         #flet.Row(controls=[site,salvar])
     )
 

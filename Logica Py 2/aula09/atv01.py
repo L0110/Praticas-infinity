@@ -14,7 +14,7 @@ import flet
 flet.app(target=main)"""
 
 def principal(janela:flet.Page):
-    janela.title = "Minha App v0.01"
+    janela.title = "Minha App v0.02"
     janela.bgcolor = flet.colors.BLUE_200
 
     

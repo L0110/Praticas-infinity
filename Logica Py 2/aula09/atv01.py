@@ -1,3 +1,9 @@
+"""
+Propor aos participantes que criem um formulário de cadastro utilizando Flet.
+Incluir campos como nome, sobrenome, email, etc. Encorajar a aplicação de diferentes widgets e layouts
+para organizar o formulário.
+"""
+
 import flet
 
 """def main(page: flet.Page):
@@ -65,8 +71,8 @@ def principal(janela:flet.Page):
     
     #print(site.value)
     janela.add(
-        ola,login,senha,salvar,site
+        ola,login,senha,site,salvar
         #flet.Row(controls=[site,salvar])
     )
-
+    janela.update()
 flet.app(principal)

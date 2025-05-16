@@ -1,0 +1,55 @@
+/* Color Theme Swatches in Hex */
+
+.Proj-portifolio-1-hex { color: #1D73A8; }
+.Proj-portifolio-2-hex { color: #A8A61D; }
+.Proj-portifolio-3-hex { color: #A81D1D; }
+.Proj-portifolio-4-hex { color: #542A2A; }
+.Background { color: #222D33; }
+.Background2 { color: #333322; }
+
+.menu{
+    background-color: #333322;
+    /*display: flex;
+    justify-content: center;*/
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    background-color:#333322;
+    color: #A8A61D;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #1D73A8;
+
+    
+}
+.menu h2{
+    margin-left:10px;
+    margin-right:10px;
+    color: #A8A61D;
+}
+.menu h2:hover{
+    color: #1D73A8;
+}
+
+body{
+    background-color: #222D33;
+    
+}
+
+.bloco{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    border: 2px solid white;
+    border-radius: 16px;
+    
+    box-shadow: 5px 5px 5px black;
+}
+
+.corpo{
+}

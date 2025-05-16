@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID Layout</title>
+    <style>
+        .container{
+            /*1 fr = 1 fração da tela*/
+            display: grid;
+            grid-template-columns: repeat(3,1fr); /* repete o valor informado (Reppetição, Valor)*/
+            grid-template-rows: repeat(3,1fr);
+            gap: 1rem
+        }
+        .container > img{
+            border: 2px solid brown;
+            border-radius: 10%;
+            box-shadow: 5px 5px 8px black;
+        }
+        p {
+            font-size: 26px;
+        }
+        p::before{
+            content: "Fake news ";
+            color: red;
+            font-weight: bold;
+        }
+        p::after {
+            content: " Fake news ";
+            color: red;
+            font-weight: bold;
+        }
+        p::first-letter{
+            font-size: 3rem;
+            color: blue;
+            border: 2px dotted orangered;
+        }
+        .il{
+            grid-column: 1/3;
+            grid-row: 1/3;
+
+        }
+    </style>
+</head>
+<body>
+    <section class = "container">
+        <img src="https://picsum.photos/id/10/200/200" alt="">
+        <img src="https://picsum.photos/id/20/200/200" alt="">
+        <img src="https://picsum.photos/id/30/200/200" alt="">
+        <img src="https://picsum.photos/id/40/200/200" alt="">
+        <img src="https://picsum.photos/id/50/200/200" alt="">
+        <img src="https://picsum.photos/id/60/200/200" alt="">
+    </section>
+    <p>A terra é plana</p>
+    <p>O universo é plano</p>
+    <p>Professor ganha bem</p>
+    
+</body>
+</html>

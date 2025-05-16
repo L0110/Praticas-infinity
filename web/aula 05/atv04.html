@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 04 - FLEXBOX
+    </title>
+    <style>
+        main{
+            font-family: Arial, sans-serif;
+            justify-content:center;
+            flex-direction: row-reverse;
+            
+        }
+        .box{
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .imagem{
+            height: 400px;
+            width: auto;
+            border-radius: 100%;
+            border: #48692f solid 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section class="box">
+            <h1>Título</h1>
+        </section>
+        <section class="box">
+            <img class="imagem" src="https://picsum.photos/100"/>
+        </section>
+        
+        <section class="box">
+            <img class="imagem" src="https://picsum.photos/300"/>
+        </section>
+        
+        <section class="box">
+            <img class="imagem" src="https://picsum.photos/301"/>
+        </section>
+        
+        <section class="box">
+            <img class="imagem" src="https://picsum.photos/400"/>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Propriedade Position em CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+            height: 3000px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: relative; /* Para alguns exemplos */
+        }
+
+        .example {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #eef;
+            min-height: 100px; /* Para visualização clara */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #ff9999;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Position: static */
+        .static-example .box {
+            position: static;
+            background-color: #ff9999;
+        }
+
+        /* Position: relative */
+        .relative-example .box {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: #99ff99;
+        }
+
+        /* Position: absolute */
+        .absolute-example .box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #9999ff;
+        }
+
+        /* Position: fixed */
+        .fixed-example .box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffff99;
+        }
+
+        /* Position: sticky */
+        .sticky-example {
+            height: 300px;
+            overflow-y: scroll;
+            background-color: #eee;
+        }
+
+        .sticky-example .box {
+            position: sticky;
+            top: 5px;
+            background-color: #99622f;
+        }
+
+        .sticky-example .filler {
+            height: 400px; /* Para permitir rolagem */
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplos da Propriedade Position em CSS</h1>
+
+    <div class="section">
+        <h2>Position: static</h2>
+        <p>Posição padrão: segue o fluxo normal do documento. Propriedades como top, right, bottom e left não têm efeito.</p>
+        <div class="example static-example">
+            <div class="box">Static</div>
+            <p>Texto normal após o elemento.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Position: relative</h2>
+        <p>Posicionado relativo à sua posição original no fluxo. Aceita top, right, bottom e left.</p>
+        <div class="example relative-example">
+            <div class="box">Relative</div>
+            <p>Texto normal após o elemento (espaço original preservado).</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Position: absolute</h2>
+        <p>Remove o elemento do fluxo normal e o posiciona em relação ao ancestral mais próximo com position (não static).</p>
+        <div class="example absolute-example">
+            <div class="box">Absolute</div>
+            <p>Texto normal (elemento absoluto não afeta o fluxo).</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Position: fixed</h2>
+        <p>Fixa o elemento em relação à janela do navegador. Não se move ao rolar a página.</p>
+        <div class="example fixed-example">
+            <div class="box">Fixed</div>
+            <p>Texto normal (elemento fixo permanece visível ao rolar).</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Position: sticky</h2>
+        <p>Combina relative e fixed: fica no fluxo até atingir um ponto de rolagem definido, então "gruda".</p>
+        <div class="example sticky-example">
+            <div class="box">Sticky</div>
+            <p>Conteúdo inicial...</p>
+            <div class="filler">Role para baixo para ver o efeito sticky!<br><br>Mais conteúdo aqui...</div>
+        </div>
+    </div>
+</body>
+</html>

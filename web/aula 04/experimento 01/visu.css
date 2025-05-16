@@ -1,0 +1,20 @@
+/* EDIÇÃO DE ELEMENTO - formata todos que usam o elemento correspondente*/
+p{color:rgb(255, 0, 255);}
+
+/* EDIÇÃO DE CLASSE - formata todos que usam a classe corresppondente*/
+.my-class{font-size:18x;}
+
+/* EDIÇÃO DE ID - formata todos que usam a ID corresondnete*/
+#my-id{background-color: yellow;}
+
+/* EDIÇÃO UNIVERSAL - formata toda a pagina em que o arquivo foi imortado*/
+*{
+    margin: 0;
+    border-radius: 10px;
+    padding: 0;
+}
+
+section{
+    
+    background-color: chartreuse;
+}

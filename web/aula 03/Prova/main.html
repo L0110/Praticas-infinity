@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <!--
+    Crie uma página HTML que contenha um formulário de cadastro simples. Utilize as tags apropriadas para criar campos de entrada de dados, botões e uma área de texto.
+
+Instruções:
+. Campo de Nome: Adicione um campo de entrada de texto (<input type="text">) com um rótulo (<label>) para o nome do usuário.
+. Campo de E-mail: Adicione um campo de entrada de e-mail (<input type="email">) com um rótulo.
+. Campo de Senha: Adicione um campo de entrada de senha (<input type="password">) com um rótulo.
+· Campo de Seleção (<select>): Adicione uma lista suspensa com várias opções (<option>) para que o usuário selecione o país.
+. Campo de Mensagem: Adicione uma área de texto (<textarea>) para que o usuário possa inserir uma mensagem ou descrição.
+. Botões: Adicione um botão para enviar o formulário (<button type="submit">) e outro para limpar os campos (<button type="reset">).
+    -->
+</head>
+<body>
+     <header>
+        <h1>Formulário</h1>
+    </header>
+    <main>
+        <form action="#">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" placeholder="Nome completo">
+            <br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="zeca@zecamail.com">
+            <br><br>
+
+            <label for="senha">Senha</label>
+            <input type="password" name="pass" id="password" placeholder="◦◦◦◦◦◦◦◦">
+            <br><br>
+
+            <label for="option">País</label>
+            <select name="op" id="">
+                <option id="op" value="0">-- Selecione --</option>
+                <option id="op" value="México">Canadá</option>
+                <option id="op" value="Argentina">Chile</option>
+                <option id="op" value="Japão">Coreia do Sul</option>
+                <option id="op" value="Uruguai">Brasil</option>
+                <option id="op" value="África do Sul">Egito</option>
+                <option id="op" value="Brasil">Uruguai</option>
+                <option id="op" value="Colômbia">Peru</option>
+                <option id="op" value="Alemanha">Holanda</option>
+                <option id="op" value="França">Itália</option>
+                <option id="op" value="Suécia">Noruega</option>
+                <option id="op" value="Austrália">Nova Zelândia</option>
+                <option id="op" value="Espanha">Portugal</option>
+                <option id="op" value="Rússia">Ucrânia</option>
+            </select>
+            <br><br>
+
+            <label for="Mensagem">Mensagem</label><br>
+            <textarea name="descricao" id="descricao" cols="40" rows="10" placeholder="Insira uma mensagem ou descrição"></textarea>
+            <br><br>
+
+            <button type="reset" onclick="alert('Cancelado')" value="Cancelar">Cancelar</button>
+            <button type="submit" onclick="alert('Enviado')" value="Enviar">Enviar </button>
+        </form>
+    </main>
+    <footer></footer>
+    
+</body>
+</html>

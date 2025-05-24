@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            background-color: #0b132b;
+            color: white;
+        }
+        .resultado{
+            border: 2px solid white;
+            margin-top: 2%;
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: 20px;
+            text-align: right;
+        }
+        .resultado > h1{
+            margin-right: 2%;
+        }
+        .container{
+            padding: 10px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            gap:1%;
+            border: 2px solid white;
+            font-size: 10px;
+            
+            border-radius: 8px;
+        }
+        .container > div{
+            font-size: 20px;
+            text-align: center;
+            border: 2px solid black;
+            padding: 50px;
+            justify-content: center;
+        }
+        .botao{
+            font-size: 30px;
+            border-radius: 16px;
+            background-color: #5BC0BE;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+
+        }
+        .botao_c{
+            background-color: #5BC0BE;
+
+        }
+        .botao_zero{
+            grid-column:span 2;
+
+        }
+        .botao_igual{
+            background-color: #3A506B;
+            grid-row:span 2;
+
+        }
+        .botao:hover{
+            background-color: white;
+            box-shadow: 0px 5px 5px;
+        }
+            
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <header class="resultado" id="result" alt="Resultado">
+            <h1>0.00</h1>
+        </header>
+    </div>
+    <main class="container">
+            <div class="botao botao_c" id="C" alt="C" >C</div>
+            <div class="botao" id="porcentagem" alt="Porcentagem" >%</div>
+            <div class="botao" id="divisor" alt="Divisor" >/</div>
+            <div class="botao" id="multiplicador" alt="Multiplicador" >*</div>
+
+            <div class="botao" id="um" alt="Um" >1</div>
+            <div class="botao" id="dois"" alt="Dois" >2</div>
+            <div class="botao" id="tres" alt="Três" >3</div>
+            <div class="botao" id="menos" alt="Menos" >-</div>
+
+            <div class="botao" id="quatro" alt="Quatro" >4</div>
+            <div class="botao" id="cinco"" alt="Cinco" >5</div>
+            <div class="botao" id="seis" alt="Seis" >6</div>
+            <div class="botao" id="mais" alt="Mais" >+</div>
+
+            <div class="botao" id="sete" alt="Sete" >7</div>
+            <div class="botao" id="oito" alt="Oito" >8</div>
+            <div class="botao" id="nove" alt="Nove" >9</div>
+            <div class="botao botao_igual" id="igual" alt="Igual" >=</div>
+
+            <div class="botao botao_zero" id="zero" alt="Zero" >0</div>
+            <div class="botao" id="virgula" alt="Virgula" >.</div>
+    </main>
+    </div>
+</body>
+</html>

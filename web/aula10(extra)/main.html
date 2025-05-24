@@ -1,0 +1,210 @@
+<!--
+TABULEIRO DE DAMA:
+COM AS PEÇAS DISPOSTAS NAS PRIMEIRAS LINHAS
+- TABULEIRO
+- PEÇAS COM CORES DIFERENTES(EX: PEÇAS BRANCAS E PEÇAS VERMELHAS)
+-->
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dama</title>
+    <style>
+/*FUNDO*/
+        body{
+            background-color: black;
+            justify-content: center;
+            display: flex;
+        }
+        .bordaTabuleiro {
+            padding-top: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 50px;
+            border: 8px solid rgb(29, 29, 29);
+            max-width: 1000px;
+            height: 1fr;
+            background-color: #6B4646;
+            border-radius: 16px;
+            
+        }
+        .bordaTabuleiro div {
+            display: grid; 
+            grid-template-columns: 0fr 0fr 0fr 0fr 0fr 0fr 0fr 0fr 0fr;
+            padding: auto;
+            justify-content: center;
+        }
+        .bordaTabuleiro div div{
+            border: 1px solid rgb(29, 29, 29);
+        }
+        .bordaTabuleiro div .bloco {
+            height: 100px;
+            width: 100px;
+            padding: 0%;
+        }
+        
+/* PISOS*/
+        .pisoBranco {
+            background-color: wheat;
+        }
+
+        .pisoPreto {
+            background-color: black;
+        }
+/* PEDRAS */
+        .pedra{
+            height: 80px;
+            width: 80px;
+            border-radius: 100%;
+        }
+
+        .pedraAzul {
+            background-color: #34A4EB;
+            box-shadow: 2px 5px 2px lightblue;
+        }
+        .pedraAzul:hover{
+            background-color: #96d3f8;
+            box-shadow: 2px 5px 2px rgb(255, 255, 255);
+        }
+
+        .pedraVermelha {
+            background-color: #EA2F2F;
+            box-shadow: 2px 5px 2px lightcoral;
+        }
+        .pedraVermelha:hover{
+            background-color: #ef7c7c;
+            box-shadow: 2px 5px 2px rgb(255, 255, 255);
+        }         
+
+/* BLOCOS INDICADORES*/
+        .blocoVazio{
+            background-color: white;
+            height: 50px;
+            width: 50px;
+        }
+        .blocoIndicadorNum{     
+            height: 50px;
+            width: 100px;   
+            font-family: monospace;
+            font-size: 32px;
+            background-color: white;
+            color: #465D6B;
+        }
+        .blocoIndicadorLetra{
+            width: 50px;
+            height: 100px;
+
+            text-align: center;
+            background-color: white;
+            font-family: monospace;
+            font-size: 32px;
+            color: #465D6B;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="bordaTabuleiro">
+        <div class="mesa">
+            <!-- NUMERADORES-->
+            <div class="blocoVazio">  </div>
+            <div class="blocoIndicadorNum"> 1 </div>
+            <div class="blocoIndicadorNum"> 2 </div>
+            <div class="blocoIndicadorNum"> 3 </div>
+            <div class="blocoIndicadorNum"> 4 </div>
+            <div class="blocoIndicadorNum"> 5 </div>
+            <div class="blocoIndicadorNum"> 6 </div>
+            <div class="blocoIndicadorNum"> 7 </div>
+            <div class="blocoIndicadorNum"> 8 </div>
+            <!--A-->
+            <div class="blocoIndicadorLetra"> A </div>
+            <div class="bloco pisoBranco" id="a1"></div>
+            <div class="bloco pisoPreto" id="a2"><div class="pedra pedraAzul" id="pa1"></div></div>
+            <div class="bloco pisoBranco" id="a3"></div>
+            <div class="bloco pisoPreto" id="a4"><div class="pedra pedraAzul" id="pa2"></div></div>
+            <div class="bloco pisoBranco" id="a5"></div>
+            <div class="bloco pisoPreto"id="a6"><div class="pedra pedraAzul" id="pa3"></div></div>
+            <div class="bloco pisoBranco" id="a7"></div>
+            <div class="bloco pisoPreto" id="a8"><div class="pedra pedraAzul" id="pa4"></div></div>
+            <!--B-->
+            
+            <div class="blocoIndicadorLetra"> B </div>
+            <div class="bloco pisoPreto" id="b1"><div class="pedra pedraAzul" id="pa5"></div></div>
+            <div class="bloco pisoBranco" id="b2"></div>
+            <div class="bloco pisoPreto" id="b3"><div class="pedra pedraAzul" id="pa6"></div></div>
+            <div class="bloco pisoBranco" id="b4"></div>
+            <div class="bloco pisoPreto" id="b5"><div class="pedra pedraAzul" id="pa7"></div></div>
+            <div class="bloco pisoBranco"id="b6"></div>
+            <div class="bloco pisoPreto"id="b7"><div class="pedra pedraAzul" id="pa8"></div></div>
+            <div class="bloco pisoBranco"id="b8"></div>
+            <!--C-->
+            <div class="blocoIndicadorLetra"> C </div>
+            <div class="bloco pisoBranco" id="c1"></div>
+            <div class="bloco pisoPreto" id="c2"><div class="pedra pedraAzul" id="pa9"></div></div>
+            <div class="bloco pisoBranco" id="c3"></div>
+            <div class="bloco pisoPreto" id="c4"><div class="pedra pedraAzul" id="pa10"></div></div>
+            <div class="bloco pisoBranco" id="c5"></div>
+            <div class="bloco pisoPreto" id="c6"><div class="pedra pedraAzul" id="pa11"></div></div>
+            <div class="bloco pisoBranco" id="c7"></div>
+            <div class="bloco pisoPreto" id="c8"><div class="pedra pedraAzul" id="pa12"></div></div>
+            <!--D-->
+            <div class="blocoIndicadorLetra"> D </div>
+            <div class="bloco pisoPreto" id="d1"></div>
+            <div class="bloco pisoBranco" id="d2"></div>
+            <div class="bloco pisoPreto" id="d3"></div>
+            <div class="bloco pisoBranco" id="d4"></div>
+            <div class="bloco pisoPreto" id="d5"></div>
+            <div class="bloco pisoBranco" id="d6"></div>
+            <div class="bloco pisoPreto" id="d7"></div>
+            <div class="bloco pisoBranco" id="d8"></div>
+            <!--E-->
+            <div class="blocoIndicadorLetra"> E </div>
+            <div class="bloco pisoBranco" id="e1"></div>
+            <div class="bloco pisoPreto" id="e2"></div>
+            <div class="bloco pisoBranco" id="e3"></div>
+            <div class="bloco pisoPreto" id="e4"></div>
+            <div class="bloco pisoBranco" id="e5"></div>
+            <div class="bloco pisoPreto" id="e6"></div>
+            <div class="bloco pisoBranco" id="e7"></div>
+            <div class="bloco pisoPreto" id="e8"></div>
+            <!--F-->
+            <div class="blocoIndicadorLetra"> F </div>
+            <div class="bloco pisoPreto" id="f1"><div class="pedra pedraVermelha" id="pv1"></div></div>
+            <div class="bloco pisoBranco" id="f2"></div>
+            <div class="bloco pisoPreto" id="f3"><div class="pedra pedraVermelha" id="pv2"></div></div>
+            <div class="bloco pisoBranco" id="f4"></div>
+            <div class="bloco pisoPreto" id="f5"><div class="pedra pedraVermelha" id="pv3"></div></div>
+            <div class="bloco pisoBranco" id="f6"></div>
+            <div class="bloco pisoPreto" id="f7"><div class="pedra pedraVermelha" id="pv4"></div></div>
+            <div class="bloco pisoBranco" id="f8"></div>
+            <!--G-->
+            <div class="blocoIndicadorLetra"> G </div>
+            <div class="bloco pisoBranco" id="g1"></div>
+            <div class="bloco pisoPreto" id="g2"><div class="pedra pedraVermelha" id="pv5"></div></div>
+            <div class="bloco pisoBranco" id="g3"></div>
+            <div class="bloco pisoPreto" id="g4"><div class="pedra pedraVermelha" id="pv6"></div></div>
+            <div class="bloco pisoBranco" id="g5"></div>
+            <div class="bloco pisoPreto" id="g6"><div class="pedra pedraVermelha" id="pv7"></div></div>
+            <div class="bloco pisoBranco" id="g7"></div>
+            <div class="bloco pisoPreto" id="g8"><div class="pedra pedraVermelha" id="pv8"></div></div>
+            <!--H-->
+            <div class="blocoIndicadorLetra"> H </div>
+            <div class="bloco pisoPreto" id="h1"><div class="pedra pedraVermelha" id="pv9"></div></div>
+            <div class="bloco pisoBranco" id="h2"></div>
+            <div class="bloco pisoPreto" id="h3"><div class="pedra pedraVermelha" id="pv10"></div></div>
+            <div class="bloco pisoBranco" id="h4"></div>
+            <div class="bloco pisoPreto" id="h5"><div class="pedra pedraVermelha" id="pv11"></div></div>
+            <div class="bloco pisoBranco" id="h6"></div>
+            <div class="bloco pisoPreto" id="h7"><div class="pedra pedraVermelha" id="pv12"></div></div>
+            <div class="bloco pisoBranco" id="h8"></div>
+        </div>
+    </div>
+</body>
+
+</html>

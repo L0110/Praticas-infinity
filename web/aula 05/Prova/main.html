@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prova_flexbox</title>
+    <!--
+    [H&CIA-A05] 
+    Crie uma página com um contêiner flexível que contenha três caixas. Utilize o Flexbox para alinhar as caixas horizontalmente no centro da página.
+    Instruções:
+    - Crie um contêiner que abriga três elementos internos, também, representando as caixas.
+    - Aplique display: flex; ao contêiner.
+    - Use a propriedade justify-content para centralizar as caixas horizontalmente.
+    - Use a propriedade align-items para alinhar as caixas verticalmente no centro do contêiner.
+    - Defina uma altura mínima para o contêiner para que o alinhamento vertical seja visível.
+    -->
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            font-size:30px;
+            text-align: center;
+            line-height: 100px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 10px;
+        }
+        .box:nth-child(2) {
+            background-color: lightgreen;
+        }
+        .box:nth-child(3) {
+            background-color: lightcoral;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="box">Box 01</div>
+        <div class="box">Box 02</div>
+        <div class="box">Box 03</div>
+</body>
+</html>

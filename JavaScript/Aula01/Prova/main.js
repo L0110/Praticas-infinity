@@ -15,17 +15,21 @@ let resultsub = num1;
 resultsub -= num2;
 console.log(`Resultado da subtração: ${resultsub}`);
 
+
 // Multiplicação
 let resultMult = num1;
 resultMult *= num2;
 console.log(`Resultado da multiplicação: ${resultMult}`);
+
 
 // Divisão
 let resultDiv = num1;
 resultDiv /= num2;
 console.log(`Resultado da divisão: ${resultDiv}`);
 
+
 // Resto
 let resultResto = num1;
 resultResto %= num2;
 console.log(`Resultado do resto: ${resultResto}`);
+

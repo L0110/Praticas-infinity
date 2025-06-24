@@ -1,0 +1,73 @@
+/*
+*Estilizacao geral - zerando as margens e o padding
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ababab55;
+}
+
+main{
+    text-align: center;
+    gap: 1.5rem;/*Equivalente a 1,5x o tamanh da fonte*/
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estrutura do semaforo */
+
+.semaforo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100px;
+    /* height: auto; */
+
+    border: 5px solid gray;
+    
+    border-radius: 50px;
+    align-items: center;
+    padding: 10px;
+    
+    background: repeating-linear-gradient(
+        120deg, /*Anguo das linhas gradientes */
+        gray 0 12px, /*Cor preta do topo ate 12px*/
+        lightyellow 12px 24px /*Cor cinza do meio de 12px a 24px*/
+    );
+}
+.luz{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+    opacity: 0.1;
+}
+.vermelho{background-color: lightcoral;}
+.amarelo{background-color: lightsalmon;}
+.verde{background-color: lightgreen;}
+
+/* O Js ira aparecer */
+.on{ 
+    opacity: 1.0;
+}
+button{
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor:pointer;
+    background-color: yellowgreen;
+    color: darkgreen;
+}
+
+button:hover{
+    background-color: darkgreen;
+    color: white;
+    opacity: 0.6;
+}

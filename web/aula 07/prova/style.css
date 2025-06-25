@@ -1,0 +1,119 @@
+/* 
+Defina Variáveis para Tamanhos:
+Crie variáveis CSS para armazenar os tamanhos de fontes e espaçamentos em diferentes tamanhos de tela (pequena, média e grande).
+Defina essas variáveis no seletor :root.
+
+
+Aplique as Variáveis:
+Utilize as variáveis CSS para definir o tamanho da fonte dos cabeçalhos e o espaçamento entre elementos.
+Modifique as variáveis em um @media query para ajustar o layout em diferentes tamanhos de tela.
+*/
+
+:root {
+    --font-size-small:24px;
+    --font-size-medium:32px;
+    --font-size-large:42px;
+
+    --espacamento-small:16px;
+    --espacamento-medium:32px;
+    --espacamento-large:40px;
+
+    --cor-fundo: #f0f0f0;
+
+    --cor-texto-fundo: #f0f0f0;
+    
+    --cor-header: #00ea23;
+
+    --cor-botao: #007bff;
+    --cor-botao-hover: #83b4e9;
+
+    --cor-fundo-p:#c2ffad;
+    --cor-fundo-m:#9ddeff;
+    --cor-fundo-g:#ffeae9;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: var(--cor-header);
+    color: var(--cor-texto-fundo);
+    text-align: center;
+}
+h1, h2 {
+    margin: 0;
+}
+main {
+    padding: var(--espacamento-large);
+}
+.btn {
+    display: inline-block;
+    padding: var(--espacamento-small) var(--espacamento-medium);
+    background-color: var(--cor-botao);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--cor-botao-hover);
+}
+.btn {
+    display: inline-block;
+    padding: var(--espacamento-small);
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-fundo);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media(max-width: 600px){
+    body{
+        font-size: var(--font-size-small);
+        background-color: var(--cor-fundo-p);}
+    header {
+        font-size: var(--font-size-small);
+        padding: var(--espacamento-small);
+    }
+    main {
+        padding: var(--espacamento-small);
+    }
+}
+@media (min-width: 601px) and (max-width: 1600px){
+    body {
+        font-size: var(--font-size-medium);
+        background-color: var(--cor-fundo-m);
+    }
+    header {
+        font-size: var(--font-size-medium);
+        padding: var(--espacamento-medium);
+    }
+    main {
+        padding: var(--espacamento-medium);
+    }
+    .btn {
+        padding: var(--espacamento-small);
+    }
+
+}
+@media(min-width: 1601px){
+    body {
+        font-size: var(--font-size-large);
+        background-color: var(--cor-fundo-g);
+    }
+    header {
+        font-size: var(--font-size-large);
+        padding: var(--espacamento-large);
+    }
+    main {
+        padding: var(--espacamento-large);
+    }
+    .btn {
+        padding: var(--espacamento-medium) var(--espacamento-large);
+    }
+
+}

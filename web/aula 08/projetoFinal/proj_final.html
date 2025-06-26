@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Projeto</title>
 
-</head>
-<body>
-    <!--
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+      <!--
     Desenvolva uma página de portfólio pessoal utilizando HTML, CSS, e, se desejado, JavaScript para interatividade. A página deve
     apresentar suas informações pessoais, habilidades, projetos, e formas de contato.
 
@@ -33,42 +31,77 @@
     portfólio seja responsivo e adaptável a diferentes
     tamanhos de tela.
 
-        Objetivo: Criar uma página de portfólio que represente suas habilidades e experiências de forma profissional e atraente, ao
-        mesmo tempo em que pratica o uso de HTML, CSS, e técnicas de design responsivo.
+    Objetivo: Criar uma página de portfólio que represente suas habilidades e experiências de forma profissional e atraente, ao
+    mesmo tempo em que pratica o uso de HTML, CSS, e técnicas de design responsivo.
     -->
-    
-    <!-- Portifolio -->
-<header>
+  <title>Projeto</title>
+</head>
+
+<body>
+  <header>
     <nav class="menu">
-        <h2>Dados pessoais</h2>
-        <h2>Habilidades</h2>
-        <h2>Projetos</h2>
-        <h2>Contato</h2>
+      <h2 class="op-menu"><a href="#dados-pessoais">Dados pessoais</a></h2>
+      <h2 class="op-menu"><a href="#habiliades">Habilidades</a></h2>
+      <h2 class="op-menu"><a href="#projetos">Projetos</a></h2>
+      <h2 class="op-menu"><a href="#contato">Contato</a></h2>
     </nav>
-</header>
+  </header>
 
-     <!-- Dados pessoais -->
-     
-<section class="corpo">
+  <section class="corpo">
+    <span id="dados-pessoais"></span>
     <section class="bloco">
-        <h1>Dados pessoais</h1>
-    
-        <span></span>
+      <h1 class="titulo">Dados pessoais</h1>
+      <span>
+        <img src="assets/avatar-icon.jpg" alt="Foto de perfil" />
+        <p>Nome: Filipe Dias Anunciação</p>
+        <p>Idade: 28</p>
+        <p>Localização: Salvador, Bahia</p>
+        <p>
+          Sobre Mim: Atuo há nove anos como auxiliar administrativo Jr,
+          estudante de Análise e Desenvolvimento de Sistemas, em busca de
+          oportunidades de inclusão e crescimento profissional na área de
+          programação.
+        </p>
+      </span>
     </section>
-<!-- Habilidades -->
-    <section class="bloco">
-        <h1>Habilidades</h1>
-    </section>
-<!-- Projetos -->
-    <section class="bloco">
-        <h1>Projetos</h1>
 
-    </section>
-<!-- Formas de contato -->
+    <span id="habiliades"></span>
     <section class="bloco">
-        <h1>Contato</h1>
+      <h1 class="titulo">Habilidades</h1>
+      <ul class="lista-habilidades">
+        <li class="box">HTML</li>
+        <li class="box">CSS</li>
+        <li class="box">JavaScript</li>
+        <li class="box">Python</li>
+        <li class="box">C++</li>
+        <li class="box">SQL</li>
+        <li class="box">Excel</li>
+        <li class="box">VBA</li>
+        <li class="box">Power BI</li>
+        <li class="box">Photoshop</li>
+        <li class="box">Illustrator</li>
+        <li class="box">After Effects</li>
+        <li class="box">Premiere</li>
+      </ul>
     </section>
-</section>
-    
+
+    <span id="projetos"></span>
+    <section class="bloco">
+      <h1 class="titulo">Projetos</h1>
+      <p>Em breve...</p>
+    </section>
+
+    <span id="contato"></span>
+    <section class="bloco">
+      <h1 class="titulo">Contato</h1>
+      <p>Telefone: <a href="tel:+5571991135457">(71) 99113-5457</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/filipe-nun/" target="_blank">Filipe Anunciação</a></p>
+      <p>GitHub: <a href="https://github.com/L0110" target="_blank">L0110</a></p>
+      <p>WhatsApp: <a href="https://api.whatsapp.com/send?phone=557191135457" target="_blank">(71) 99113-5457</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/filipenun/" target="_blank">@filipenun</a></p>
+      <p>Email: <a href="mailto:contato.filipe.anunciacao@gmail.com" target="_blank">contato.filipe.anunciacao@gmail.com</a></p>
+    </section>
+  </section>
 </body>
+
 </html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Mercadinho</title>
+</head>
+<body>
+    <script>
+        let total = 0;
+        let preco = 1;
+        while(preco>0) {
+            preco = parseFloat( prompt("Digite PREÇO Mercadoria: ") );
+            total += preco;
+        }
+        alert(`Total a pagar = R$ ${total.toFixed(2)}`);
+
+    </script>
+</body>
+</html>

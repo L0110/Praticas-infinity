@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function media(...valores){
+            if(valores.length <2){
+                 alert("É necessário 2 ou mais valores para calcular a média");
+                 return null;
+            }
+            let soma = valores.reduce(
+                (somatorio, valorAtual) => somatorio += valorAtual
+            );
+            console.log(`Soma: ${soma}`);
+            return (soma/valores.length)
+        }
+        let n1 = parseInt(prompt("insira nota: "));
+        let n2 = parseInt(prompt("insira nota: "));
+        let n3 = parseInt(prompt("insira nota: "));
+        let n4 = parseInt(prompt("insira nota: "));
+        alert(`Média: ${media(n1,n2,n3,n4)}`);
+        console.log(`Média: ${media(n1,n2,n3,n4)}`);
+    </script>
+</body>
+</html>

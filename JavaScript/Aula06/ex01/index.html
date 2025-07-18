@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function saudacao( nome = "visitante"){
+            let mensagem = `Olá, ${nome}!`;
+            console.log(mensagem);
+            alert(mensagem);
+        }
+
+        //function listarFilmes(filmePrincipal, ...listarOutrosFilmes){}
+        //function listarFilmes(listarOutrosFilmes){}
+        function listarFilmes(...listarOutrosFilmes){
+            console.log(`Seus filmes preferidos:`);
+            console.log("==== forEach ====");
+            listarOutrosFilmes.forEach(
+                (valor,indice) => {
+                    console.log(`Valor: ${valor} -> posição ${indice}`);
+                });
+            console.log("==== for... of ====");
+            for(valor of listarOutrosFilmes){
+                console.log(`Valor: ${valor} -> posição ${"x"}`);
+            }
+            console.log("==== for vanilla ====");
+            for(let indice = 0; indice<listarOutrosFilmes.length; indice++){
+    
+                    console.log(`Valor: ${listarOutrosFilmes[indice]} -> posição ${indice}`);
+                }
+        }
+
+
+        saudacao("Bianca");
+        saudacao();
+        //listarFilmes("Matrix",["Vingadores","Avatar"])
+        //listarFilmes(["Matrix","Vingadores","Avatar"])
+        listarFilmes("Matrix","Vingadores","Avatar")
+    </script>
+</body>
+</html>

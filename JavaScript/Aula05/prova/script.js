@@ -12,6 +12,7 @@ Requisitos do Projeto:
 * Remover Tarefas:
 - Solicite ao usuário o índice da tarefa que deseja remover e utilize o método splice() para removê-la do array.
 
+
 * Concluir Tarefas (Opcional):
 - Peça ao usuário o índice de uma tarefa e marque-a como concluída, modificando a string para algo como "✅ Lavar a louça".
 

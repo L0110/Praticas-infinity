@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+</head>
+<body>
+    <div></div>
+    <div id="teste" class="caio">DIV 01</div>
+    <div class="caio">DIV 02</div>
+    <div class="caio">DIV 03</div>
+    <h1 class="caio">Eu sou um H1</h1>
+    <a id="meu-link">Google</a>
+    <p>Sou um Paragrafo</p>
+
+    <img/>
+    <style>
+        .cor2{background-color:orangered}
+        .cor{background-color:green}
+    </style>
+    <script>
+        /*const div = document.querySelector("div");*/
+        const arrCaio = document.getElementsByClassName("caio");
+        const div1 = document.querySelector("div");
+        /*div.innerHTML = `<button>Imprimir</button>`;*/
+        
+        const tagP = document.getElementsByTagName("p");
+        tagP[0].innerHTML += `<h2>Estudando DOM</h2>`;
+        
+        
+        const divAll = document.querySelectorAll(".caio");
+        divAll.innerHTML += `<h2>🦆</h2>`;
+
+        document.getElementById("teste").textContent = "🦆";
+        
+        const meuLink = document.getElementById("meu-link");
+        meuLink.setAttribute("href","https://www.google.com");
+        meuLink.style.fontSize = "44px";        
+        meuLink.style.color = "white";
+        meuLink.style.backgroundColor = "red";
+
+
+
+
+        // -----------------------------------------
+        const imagem = document.querySelector("img");
+        imagem.setAttribute("src","https://img.quizur.com/f/img61cb94d21b88f1.48132339.jpg?lastEdited=1640731870")
+
+        function fCor(){
+            pagina.setAttribute("class","cor");
+        }
+        
+        function fCor2(){
+            pagina.setAttribute("class","cor2");
+        }
+
+        const cor = document.getElementsByClassName("cor");
+        const pagina = document.body;
+        pagina.onmousemove = fCor;
+        pagina.onclick = fCor2;
+
+
+
+    </script>
+    
+</body>
+</html>

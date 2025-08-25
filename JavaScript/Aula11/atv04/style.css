@@ -1,0 +1,9 @@
+header{
+    border: 2px solid red;
+}
+main{
+    border: 2px solid blue;
+}
+footer{
+    border: 2px solid green;
+}

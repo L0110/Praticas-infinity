@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova - Aula 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Formulário de Cadastro</h1>
+    </header>
+    <div class="container">
+            <main>
+        <form id="formulario-registro">
+            <label for="nome-usuario">Nome de Usuário:</label>
+            <input type="text" name="nome-usuario" id="nome-usuario" placeholder="Nome de usuario" required>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" placeholder="Senha" required>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone" placeholder="(xx)xxxxx-xxxx" required>
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" name="data-nascimento" id="data-nascimento" required>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="meu-email@exemplo.com" required>
+
+            <button type="submit" id="btn-enviar">Enviar</button>
+        </form>
+        <script src="script.js"></script>
+    </main>
+    </div>
+</body>
+</html>

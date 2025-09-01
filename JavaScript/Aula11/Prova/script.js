@@ -111,7 +111,7 @@ btnEnviar.addEventListener("click", function(event){
     criarTabela();
 });
 
-// ---------- Botao limpar lista agora é criado dinamicamente na tabela ----------
+// ---------- Botao limpar lista  ----------
 function adicionarBotaoLimpar(tabela) {
     const rodape = document.createElement("tr");
     rodape.innerHTML = `
@@ -121,14 +121,12 @@ function adicionarBotaoLimpar(tabela) {
     `;
     tabela.appendChild(rodape);
 
-    // Adiciona o event listener ao botão recém-criado
     rodape.querySelector("#btn-limpar-lista").addEventListener("click", function() {
         listaCadastral.length = 0;
         criarTabela();
     });
 }
 
-// Modifique a função criarTabela para adicionar o botão ao final da tabela
 const originalCriarTabela = criarTabela;
 criarTabela = function() {
     tabelaContainer.innerHTML = "";

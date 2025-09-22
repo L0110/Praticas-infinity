@@ -1,0 +1,80 @@
+:root{
+    --card-cor1: #ff8787;
+    --card-cor2: #47ffff;
+    --card-cor3: #ffcc33;
+    --card-cor4: #d1ff33;
+    --card-cor5: #33ff57;
+    --card-cor6: #739279;
+
+    --cor-fundo1: #c8c8c8;
+    --cor-fundo2: #272727;
+
+    --cor-fonte1: #333333;
+    --cor-fonte2: #ffffff;
+    --cor-fonte3: #000000;
+    --cor-fonte4: #4848488a;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo1);
+    color: var(--cor-fonte1);
+    margin: 1;
+    padding: 1;
+}
+
+.card-tarefa ul{
+    background-color: var(--card-cor1);
+    color: var(--cor-fonte2);
+    border-radius: 8px;
+    border: var(--cor-fundo2) 2px solid;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: var(--cor-fundo2) 2px 2px 2px;
+}
+.card-tarefa-concluida ul{
+    background-color: var(--card-cor6);
+    color: var(--cor-fonte4);
+    border-radius: 8px;
+    border: var(--cor-fundo2) 2px solid;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: var(--cor-fundo2) 2px 2px 2px;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.concluida{
+    text-decoration: line-through;
+}
+
+.input{
+    border-radius: 8px;
+    border: var(--cor-fundo2) 2px solid;
+    background-color: var(--card-cor3);
+    padding: 8px;
+    margin: 8px;
+    box-shadow: var(--cor-fundo2) 2px 2px 2px;
+}
+.botao{
+    border-radius: 8px;
+    border: var(--cor-fundo2) 2px solid;
+    padding: 8px;
+    margin: 2px;
+    box-shadow: var(--cor-fundo2) 2px 2px 2px;
+    background-color: var(--card-cor3);
+    color: var(--cor-fonte3);
+    cursor: pointer;
+}
+.botao:hover{
+    background-color: var(--card-cor4);
+    color: var(--cor-fonte1);
+    box-shadow: var(--cor-fundo2) 4px 4px 4px;
+}
+.botao:active{
+    box-shadow: var(--cor-fundo2) 1px 1px 1px;
+    transform: translateY(2px);
+    background-color: var(--card-cor5);
+}

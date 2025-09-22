@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Aula 12</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Lista de tarefas</header>
+    <main>
+        <section></section>
+            <h2>Adicionar tarefa</h2>
+            <form>
+                <input class="input" type="text" placeholder="Nome da tarefa" id="tarefa">
+                <button class="botao" type="submit" onclick="salvar(event)">Adicionar</button>
+                <button class="botao" type="submit" onclick="apagar(event)">Remover tudo</button>
+            </form>
+        </section>
+        <section>
+            <div class="card-tarefa">
+    
+                <h2>Lista de tarefas</h2>
+                <ul id="listaTarefas"></ul>
+            </div>
+        </section>
+        <section>
+            <div class="card-tarefa-concluida">
+    
+                <h2>Concluido</h2>
+                <ul id="listaConcluidas"></ul>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+</html>

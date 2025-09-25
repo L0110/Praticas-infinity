@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova aula 13</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="cabecalho">Formulario de cadastro</h1>
+    </header>
+    <main>
+        <section class="formulario">
+
+                <section class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="Digite seu nome">
+                </section>
+                <section class="campo">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário">
+                </section>
+                <section class="campo">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="******">
+                </section>
+                <section class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@mail.com">
+                </section>
+                <section class="campo">
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" placeholder="Digite sua idade">
+                </section>
+                <button id="enviar" onclick="enviarFormulario(event)">Cadastrar</button>
+        </section>
+        <section class="mensagem" id="mensagem"></section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bolinhas-animadas">
+    <div>
+        
+    </div>
+    <header></header>
+    <main>
+        <section class="collum">
+            <button class="btn" name="buscarTarefa" id="btn-buscar">↺ Buscar tarefas</button>          
+            <h2 class="card-titulos">Nova tarefa</h2>
+            <section class="card collum">
+                <input class="input" type="text" name="Tarefa" id="in-Tarefa" placeholder="Tarefa">
+
+                    <button class="btn salvar" disabled="disabled" id="btn-add">📃 Adicionar</button>
+                    <button class="btn excluir-tudo btn-delete" id="btn-clear">🗑️ Apagar tudo</button>
+
+            </section>
+        </section>
+        <section class="coluna-01">
+            <h2 class="card-titulos">Tarefas pendentes</h2>
+        </section>
+        <section class="coluna-02">
+            <h2 class="card-titulos">Tarefas concluídas</h2>
+        </section>
+        <template>
+            <!-- Tarefa pendente -->
+            <div class="card-tarefa card-pendente">
+                <ul class="tarefa">
+                    <li>
+                        <span></span>
+                        <span>
+                            <button type="button" onclick="concluirTarefa(this)">✔</button>
+                            <button class="btn-delete" type="button" onclick="removerTarefa(this)">🗑️</button>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Tarefa concluída -->
+            <div class="card-tarefa card-concluida">
+                <ul class="tarefa-concluida">
+                    <li>
+                        <span class="concluida"></span>
+                        <span>
+                            <button type="button" onclick="desfazerConclusao(this)">↩</button>
+                            <button class="btn-delete" type="button" onclick="removerTarefa(this)">🗑️</button>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Mensagens temporárias -->
+            <h2 class="bloquinho-temp sucesso">Tarefa adicionada</h2>
+            <h2 class="bloquinho-temp falha">Tarefa não adicionada - </h2>
+        </template>
+    </main>
+
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

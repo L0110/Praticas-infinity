@@ -1,0 +1,190 @@
+:root{
+    --card-cor1: #ff8787;
+    --card-cor1t: #ff87879e;
+    --card-cor2: #47ffff;
+    --card-cor3: #ffcc33;
+    --card-cor4: #d1ff33;
+    --card-cor5: #33ff58;
+    --card-cor5t: #33ff5894;
+    --card-cor6: #739279;
+
+    --cor-fundo1: #c8c8c8;
+    --cor-fundo2: #272727;
+
+    --cor-fonte1: #333333;
+    --cor-fonte2: #ffffff;
+    --cor-fonte3: #000000;
+    --cor-fonte4: #4848488a;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70px;
+    position: relative;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bolinhas-animadas{
+    background-image: radial-gradient(circle, var(--cor-fundo2) 2%, var(--card-cor6) 5%);
+    background-size: 60px 60px;
+    background-attachment: scroll;
+    background-position: 0 0, 10px 10px;
+    animation: mover-fundo 30s linear infinite;
+}
+
+@keyframes mover-fundo{
+    from{
+        background-position: 0 0, 10px 10px;
+    }
+    to{
+        background-position: 1200px 1200px, 10px 10px;
+    }
+}
+.card{
+    background-color: var(--cor-fundo1);
+    box-shadow: var(--cor-fundo2) 5px 5px 0px 0px;
+    border: 2px solid var(--cor-fundo2);
+    color: var(--cor-fonte3);
+    padding: 20px;
+    border-radius: 16px;
+    margin: auto;
+    margin-top: 20px;
+
+}
+.collum{
+    flex-direction: column;
+}
+
+.input{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;  
+    border-radius: 16px;
+    margin: 10px 0px 10px 0px;
+    border: 2px solid var(--cor-fundo2);
+    padding: 5px;
+}
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 16px;
+    margin: 5px 0px 5px 0px;
+    border: 2px solid var(--cor-fundo2);
+    padding: 5px;
+    background-color: var(--cor-fonte4);
+    box-shadow: var(--cor-fundo2) 2px 2px 0px 0px;
+    color:var(--cor-fonte2);
+    min-height: 32px;
+    min-width: 32px;
+}
+
+.btn-delete:hover{
+    background-color: var(--card-cor4);
+}
+.btn-delete:active{
+    background-color: var(--card-cor3);
+}
+
+button:hover{
+    background-color: var(--card-cor5);
+    color: var(--cor-fonte3);
+    cursor: pointer;
+}
+button:active{
+    background-color: var(--card-cor4);
+    color: var(--cor-fonte1);
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.card-tarefa ul{
+    background-color: var(--card-cor2);
+    color: var(--cor-fonte1);
+    border-radius: 8px;
+    border: var(--cor-fundo2) 2px solid;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: var(--cor-fundo2) 2px 2px 2px;
+
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    background-color: var(--cor-fundo1);
+    color: var(--cor-fonte3);
+    border-radius: 8px;
+    border: var(--cor-fundo2) 2px solid;
+    box-shadow: var(--cor-fundo2) 2px 2px 2px;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 600px;
+}
+.concluida{
+    text-decoration: line-through;
+    color: var(--cor-fonte4);
+}
+.card-concluida ul{
+    background-color: var(--card-cor1);
+}
+
+.sucesso{
+    background-color: var(--card-cor5t);
+}
+.falha{
+    background-color: var(--card-cor1t);
+}
+
+.bloquinho-temp{
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    border: var(--cor-fundo2) 2px solid;
+    box-shadow: var(--cor-fundo2) 2px 2px 2px;
+    color: var(--cor-fonte3);
+    z-index: 1000;
+
+    animation: ocultar 5s forwards;
+}
+@keyframes ocultar{
+    0%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+.coluna-01, .coluna-02{
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    margin: 0 2%;
+}
+li > span:last-child {
+    margin-top: auto;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    width: 100%;
+}

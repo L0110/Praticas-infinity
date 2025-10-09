@@ -1,0 +1,111 @@
+:root {
+    --cor-fonte1: #f0f0f0;
+    --cor-fonte2: #333333;
+    --cor-fundo1: #1a1a1a;
+    --cor-fundo2: #4b4b4b;
+    --cor-accent1: #ffcc00;
+    --cor-accent2: #ff6600;
+    --cor-accent3: #0066ff;
+    --cor-accent4: #00cc66;
+    --cor-accent5: #cc00ff;
+    --cor-accent6: #ff0066;
+    --cor-sombra1: #000000a0;
+    --invert1: invert(1) sepia(1) saturate(100%) hue-rotate(180deg);
+    --invert2: invert(0.766) sepia(1) saturate(10000%) hue-rotate(10deg);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    background: linear-gradient(45deg, #1a1a1a, #333333, #1a1a1a, #333333);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: var(--cor-fonte1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* [menu] */
+.menu {
+    background-color: var(--cor-fundo2);
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 6px var(--cor-sombra1);
+}
+
+.menu-lista {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-lista .right {
+    float: right;
+    margin-right: 10px;
+}
+
+.menu-lista .right .submenu {
+    right: 0;
+    left: auto;
+    text-align: right;
+}
+.menu-lista img {
+    height: 45px;
+    margin: 0px 10px 0px 20px;
+    float: left;
+    filter: var(--invert1);
+    -webkit-filter: var(--invert1);
+}
+.menu-lista img:hover {
+    filter: var(--invert2);
+    -webkit-filter: var(--invert2);
+}
+
+.menu-lista li {
+    float: left;
+    list-style: none;
+}
+
+.menu-lista li a {
+    display: block;
+    color: var(--cor-fonte1);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menu-lista li a:hover {
+    background-color: var(--cor-accent1);
+    color: var(--cor-fonte2);
+}
+
+.menu-lista li a:active {
+    background-color: var(--cor-accent2);
+    color: var(--cor-fonte1);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px var(--cor-sombra1);
+}
+
+.submenu li {
+    float: none;
+}
+
+.submenu li a {
+    padding: 12px 16px;
+}
+
+.menu-lista li:hover .submenu {
+    display: block;
+}
+
+
